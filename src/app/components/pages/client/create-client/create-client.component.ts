@@ -19,7 +19,7 @@ export class CreateClientComponent implements OnInit {
     
   });
 
-  constructor(private router: Router, private formBuilder: FormBuilder) { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }

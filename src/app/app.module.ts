@@ -1,3 +1,4 @@
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -10,7 +11,7 @@ import { FactureComponent } from './components/pages/facture/facture.component';
 import { LoginComponent } from './components/pages/login/login.component';
 import { ContactComponent } from './components/pages/contact/contact.component';
 import { DevisComponent } from './components/pages/devis/devis.component';
-import { ListDevisComponent } from './components/pages/list-devis/list-devis.component';
+import { ListDevisComponent } from './components/pages/devis/list-devis/list-devis.component';
 import { ClientComponent } from './components/pages/client/client.component';
 import { PrestationsComponent } from './components/pages/prestations/prestations.component';
 import { CreateClientComponent } from './components/pages/client/create-client/create-client.component';
@@ -38,7 +39,8 @@ import { ListClientComponent } from './components/pages/client/list-client/list-
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
