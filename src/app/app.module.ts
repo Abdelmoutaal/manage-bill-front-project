@@ -16,6 +16,8 @@ import { ClientComponent } from './components/pages/client/client.component';
 import { PrestationsComponent } from './components/pages/prestations/prestations.component';
 import { CreateClientComponent } from './components/pages/client/create-client/create-client.component';
 import { ListClientComponent } from './components/pages/client/list-client/list-client.component';
+import { CreateDevisComponent } from './components/pages/devis/create-devis/create-devis.component';
+import { ListPrestationsComponent } from './components/pages/prestations/list-prestations/list-prestations.component';
 
 
 
@@ -34,6 +36,8 @@ import { ListClientComponent } from './components/pages/client/list-client/list-
     PrestationsComponent,
     CreateClientComponent,
     ListClientComponent,
+    CreateDevisComponent,
+    ListPrestationsComponent,
   
     
   ],
