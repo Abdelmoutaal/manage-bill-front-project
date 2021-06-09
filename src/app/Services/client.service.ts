@@ -22,7 +22,7 @@ export class ClientService {
       client
     );
   }
-  deleteClient(client: Client): Observable<void> {
-      return this.http.delete<void>(`${this.apiServerUrl}/client/supprimerClient`)
+  deleteClient(clientId: number): Observable<void> {
+     return this.http.delete<void>(`${this.apiServerUrl}/client/supprimerClient/${clientId}`);
   }
 }

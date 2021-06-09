@@ -10,7 +10,7 @@ import { ClientService } from 'src/app/Services/client.service';
 })
 export class ListClientComponent implements OnInit {
   public clients: Client[] = [];
-  public deleteClient: Client | undefined;
+  
 
   constructor(private clientService: ClientService) { }
 
@@ -30,10 +30,12 @@ public afficher(): void {
     }
   );
 }
-public onDeleteClient(client: Client): void {
-  this.clientService.deleteClient(client).subscribe(
+public onDeleteClient(clientId: number): void {
+  console.log(clientId);
+  this.clientService.deleteClient(clientId).subscribe(
     (response: void) => {
       console.log(response);
+      this.afficher();
     },
     (error : HttpErrorResponse) => {
       alert(error.message);
