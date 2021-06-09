@@ -1,1 +1,83 @@
-<p>list-client works!</p>
+<app-header></app-header>
+
+<div class="page-title-area page-title-bg1">
+    <div class="container">
+        <div class="page-title-content">
+            <h2>Liste des clients</h2>
+        </div>
+    </div>
+</div>
+
+<section class="cart-area ptb-100">
+    <div class="container">
+        <form>
+            <div class="cart-table table-responsive" >
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th scope="col">id</th>
+                            <th scope="col">Raison Social</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">N° Tel</th>
+                            <th scope="col">Adresse</th>
+                            <th scope="col">N° TVA</th>
+                            <th scope="col">N° Client</th>
+                        </tr>
+                    </thead>
+
+                    <tbody *ngFor="let client of clients">
+                        <tr>
+                            <td class="product-thumbnail">
+                                <a routerLink="/">
+                                    {{client.id}}
+                                </a>
+                            </td>
+
+                            <td class="product-name">
+                                <a routerLink="/"> {{client.raisonSocial}}</a>
+                            </td>
+
+                            <td class="product-price">
+                                <span class="unit-amount">{{client.email}}</span>
+                            </td>
+
+                            <td class="product-subtotal">
+                                <span class="subtotal-amount">{{client.numTelephone}}</span>
+                            </td>
+
+                            <td class="product-subtotal">
+                                <span class="subtotal-amount">{{client.adresse}}</span>
+                            </td>
+
+                            <td class="product-subtotal">
+                                <span class="subtotal-amount">{{client.numTVA}}</span>
+                            </td>
+                            <td class="product-subtotal">
+                                <span class="subtotal-amount">{{client.num}}</span>
+                                <a routerLink="/" class="remove"><i class='bx bx-trash'></i></a>
+
+                            </td>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="cart-buttons">
+                <div class="row align-items-center">
+                    <div class="col-lg-7 col-sm-7 col-md-7">
+                        <a routerLink="/create-client" class="optional-btn">Ajouter</a>
+                    </div>
+
+                    <div class="col-lg-5 col-sm-5 col-md-5 text-right">
+                        <a routerLink="/" class="default-btn">Generer PDF</a>
+                    </div>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</section>
+
+
+

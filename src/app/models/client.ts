@@ -5,4 +5,5 @@ export interface Client {
     numTelephone: String;
     adresse: String;
     numTVA: String;
+    num: String;
 }

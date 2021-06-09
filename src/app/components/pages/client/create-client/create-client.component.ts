@@ -1,6 +1,10 @@
+import { HttpErrorResponse } from '@angular/common/http';
+import { ClientService } from './../../../../Services/client.service';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl,FormGroup, Validators } from '@angular/forms';
+import { FormControl,FormGroup, NgForm, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { Client } from 'src/app/models/client';
+import { error } from '@angular/compiler/src/util';
 
 @Component({
   selector: 'app-create-client',
@@ -9,19 +13,23 @@ import { Router } from '@angular/router';
 })
 export class CreateClientComponent implements OnInit {
 
-  createForm = new FormGroup({
-    numero: new FormControl('', [Validators.required]),
-    rasonSocial: new FormControl('', [Validators.required]),
-    numeroTVA: new FormControl('', [Validators.required]),
-    adresse: new FormControl('', [Validators.required]),
-    email: new FormControl('', [Validators.required]),
-    phone: new FormControl('', [Validators.required]),
-    
-  });
+  
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private clientService: ClientService ) { }
 
   ngOnInit(): void {
   }
+  public onAddClient(addForm: NgForm): void {
+    //document.getElementById('add-client-form')?.click();
+    this.clientService.addClient(addForm.value).subscribe(
+      (response: Client) => {
+        console.log(response);
+      },
+      (error : HttpErrorResponse) => {
+        alert(error.message);
+      }
+    )
+  }
 
 }
+

@@ -18,6 +18,7 @@ import { CreateClientComponent } from './components/pages/client/create-client/c
 import { ListClientComponent } from './components/pages/client/list-client/list-client.component';
 import { CreateDevisComponent } from './components/pages/devis/create-devis/create-devis.component';
 import { ListPrestationsComponent } from './components/pages/prestations/list-prestations/list-prestations.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -44,7 +45,8 @@ import { ListPrestationsComponent } from './components/pages/prestations/list-pr
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

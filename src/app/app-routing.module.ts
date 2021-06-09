@@ -15,7 +15,7 @@ import { ListPrestationsComponent } from './components/pages/prestations/list-pr
 import { PrestationsComponent } from './components/pages/prestations/prestations.component';
 
 const routes: Routes = [
-  {path: 'home', component: HomeComponent},
+  {path: '', component: HomeComponent},
   {path: 'header', component: HeaderComponent},
   {path: 'footer', component: FooterComponent},
   {path: 'login', component: LoginComponent},
