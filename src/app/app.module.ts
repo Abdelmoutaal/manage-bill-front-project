@@ -19,8 +19,7 @@ import { ListClientComponent } from './components/pages/client/list-client/list-
 import { CreateDevisComponent } from './components/pages/devis/create-devis/create-devis.component';
 import { ListPrestationsComponent } from './components/pages/prestations/list-prestations/list-prestations.component';
 import { FormsModule } from '@angular/forms';
-
-
+import { CreatePrestationComponent } from './components/pages/prestations/create-prestation/create-prestation.component';
 
 @NgModule({
   declarations: [
@@ -39,16 +38,10 @@ import { FormsModule } from '@angular/forms';
     ListClientComponent,
     CreateDevisComponent,
     ListPrestationsComponent,
-  
-    
+    CreatePrestationComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    FormsModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

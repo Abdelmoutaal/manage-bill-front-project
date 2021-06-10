@@ -1,6 +1,6 @@
 export interface Prestation {
-    id: Number;
-    ref: string;
-    designation: string;
-    prixUnitaire: Number;
-  }
+  id: number;
+  ref: string;
+  designation: string;
+  prixUnitaire: number;
+}

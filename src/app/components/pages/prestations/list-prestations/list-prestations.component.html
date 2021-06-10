@@ -17,7 +17,7 @@
                         <tr>
                             <th scope="col">id</th>
                             <th scope="col">Designation</th>
-                            <th scope="col">Unit Price</th>
+                            <th scope="col">Prix unitaire</th>
                             <th scope="col">Reference</th>
                             
                         </tr>
@@ -44,7 +44,7 @@
                             <td class="product-subtotal">
                                 <span class="subtotal-amount">{{prestation.ref}}</span>
 
-                                <a routerLink="/cart" class="remove"><i class='bx bx-trash'></i></a>
+                                <a routerLink="/list-prestation" (click)="onDeletePrestation(prestation.id)"  class="remove"><i class='bx bx-trash'></i></a>
                             </td>
                         </tr>
                     </tbody>
