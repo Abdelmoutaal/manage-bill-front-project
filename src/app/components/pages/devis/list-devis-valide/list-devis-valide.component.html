@@ -1,0 +1,72 @@
+<app-header></app-header>
+
+<div class="page-title-area page-title-bg1">
+    <div class="container">
+        <div class="page-title-content">
+            <h2>Liste des clients</h2>
+        </div>
+    </div>
+</div>
+
+<section class="cart-area ptb-100">
+    <div class="container">
+        <form>
+            <div class="cart-table table-responsive" >
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th scope="col">id</th>
+                            <th scope="col">Numéro Devis</th>
+                            <th scope="col">Raison Social Client</th>
+                            <th scope="col">Prix final</th>
+                            
+                        </tr>
+                    </thead>
+
+                    <tbody *ngFor="let devis of listDevis">
+                        <tr>
+                            <td class="product-thumbnail">
+                                <a routerLink="/">
+                                    {{devis.id}}
+                                </a>
+                            </td>
+                            <td class="product-price">
+                                <span class="unit-amount">{{devis.num}}</span>
+                            </td>
+                            <td class="product-name">
+                                <a routerLink="/"> {{devis.client.raisonSocial}}</a>
+                            </td>
+
+                            
+
+                            <td class="product-subtotal">
+                                <span class="subtotal-amount">{{devis.prixFinal}}</span>
+                            </td>
+
+                        
+                            <td class="product-subtotal">
+                                
+                                <a routerLink="/list-devis-valide"  class="remove"><i class='bx bx-trash'></i></a>
+
+                            </td>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="cart-buttons">
+                <div class="row align-items-center">
+                    <div class="col-lg-7 col-sm-7 col-md-7">
+                        <a routerLink="/create-client" class="optional-btn">Ajouter</a>
+                    </div>
+
+                    <div class="col-lg-5 col-sm-5 col-md-5 text-right">
+                        <a routerLink="/" class="default-btn">Generer PDF</a>
+                    </div>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</section>
