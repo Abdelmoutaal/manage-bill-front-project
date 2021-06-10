@@ -31,7 +31,7 @@ export class ListPrestationsComponent implements OnInit {
 
   public onDeletePrestation(prestationId: number): void {
     console.log(prestationId);
-    this.prestationService.deleteClient(prestationId).subscribe(
+    this.prestationService.deletePrestation(prestationId).subscribe(
       (response: void) => {
         console.log(response);
         this.afficher();

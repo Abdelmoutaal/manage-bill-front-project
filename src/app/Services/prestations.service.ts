@@ -23,7 +23,7 @@ export class PrestationService {
       prestation
     );
   }
-  deleteClient(prestationId: number): Observable<void> {
+  deletePrestation(prestationId: number): Observable<void> {
     return this.http.delete<void>(
       `${this.apiServerUrl}/prestation/supprimerPrestation${prestationId}`
     );
