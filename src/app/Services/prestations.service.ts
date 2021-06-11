@@ -12,7 +12,7 @@ export class PrestationService {
 
   public afficher(): Observable<Prestation[]> {
     return this.http.get<Prestation[]>(
-      `${this.apiServerUrl}/prestation/afficherPrestation`
+      `${this.apiServerUrl}/client/afficherPrestation`
     );
   }
 

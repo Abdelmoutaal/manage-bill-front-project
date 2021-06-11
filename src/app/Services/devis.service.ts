@@ -18,4 +18,11 @@ export class DevisService {
       `${this.apiServerUrl}/devis/listDevis`
     );
   }
+  addDevis(devis: Devis): Observable<Devis> {
+    console.log(devis);
+  return this.http.post<Devis>(
+    `${this.apiServerUrl}/devis/addDevis`,
+    devis
+  );
+} 
 }

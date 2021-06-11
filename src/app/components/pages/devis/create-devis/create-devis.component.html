@@ -8,71 +8,70 @@
     </div>
 </div>
 
-<section class="cart-area ptb-100">
+<section class="checkout-area ptb-100">
     <div class="container">
-        <form>
-            <div class="cart-table table-responsive">
-                <table class="table table-bordered">
-                    <thead>
-                        <tr>
-                            <th scope="col">Id</th>
-                            <th scope="col">Numero</th>
-                            <th scope="col">Client</th>
-                            <th scope="col">Prestation</th>
-                            <th scope="col">Etat</th>
-                            <th scope="col">Date</th>
-                        </tr>
-                    </thead>
+        <form #addForm="ngForm" (ngSubmit)="onAddDevis(addForm)">
+            <div class="row m-0">
+                <div class="col-lg-6 col-md-12 p-0">
+                    <div class="col-lg-12 col-md-12">
 
-                    <tbody>
-                        <tr>
-                            <td class="product-thumbnail">
-                                <a routerLink="/">
-                                    
-                                </a>
-                            </td>
+                        <div class="form-group" >
+                            <label>Client <span class="required">*</span></label>
 
-                            <td class="product-name">
-                                <a routerLink="/">Ham Salad</a>
-                            </td>
+                            <div class="select-box" >
+                                <select class="form-control" required ngModel name= "client">
+                                    <option *ngFor="let client of clients">{{client.raisonSocial}}</option>
 
-                            <td class="product-price">
-                                <span class="unit-amount">$20.00</span>
-                            </td>
-
-                            <td class="product-quantity">
-                                <div class="input-counter">
-                                    
-                                </div>
-                            </td>
-
-                            <td class="product-subtotal">
-                                <span class="subtotal-amount">$20.00</span>
-
-                            </td>
-                            <td class="product-subtotal">
-                                <span class="subtotal-amount">$20.00</span>
-
-                                <a routerLink="/cart" class="remove"><i class='bx bx-trash'></i></a>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <div class="cart-buttons">
-                <div class="row align-items-center">
-                    <div class="col-lg-7 col-sm-7 col-md-7">
-                        <a routerLink="/product-list" class="optional-btn">Continue Shopping</a>
+                                </select>
+                            </div>
+                        </div>
                     </div>
+                    <div class="col-lg-12 col-md-12">
+                        <div class="form-group">
+                            <label>Prestation <span class="required">*</span></label>
 
-                    <div class="col-lg-5 col-sm-5 col-md-5 text-right">
-                        <a routerLink="/cart" class="default-btn">Generer PDF</a>
+                            <div class="select-box">
+                                <select class="form-control" required ngModel name= "num">
+                                    <option *ngFor="let prestation of prestations">{{prestation.ref}}</option>
+
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="form-group">
+                            <label>N° Devis <span class="required">*</span></label>
+
+                            
+                                <div class="form-group">
+                                    <input type="text" required ngModel name= "num" class="form-control">
+                                </div>
+                            
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="form-group">
+                            <label>Etat <span class="required">*</span></label>
+
+                            <div class="select-box">
+                                <select class="form-control" required ngModel name= "etat">
+                                    <option>En cours</option>
+                                    <option>Valide</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="order-details">
+                            <div class="payment-box">
+                                <button [disabled]="addForm.invalid" type="submit" (click)="submitCreate()" class="btn btn-primary">Creer</button>
+
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
-
         </form>
     </div>
 </section>
-

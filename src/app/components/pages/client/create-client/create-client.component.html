@@ -62,7 +62,7 @@
                             <div class="cart-buttons">
                                 <div class="row align-items-center">
                                     <div class="col-lg-12 col-md-12 text-left">
-                                        <button [disabled]="addForm.invalid" type="submit" class="btn btn-primary">Creer</button>
+                                        <button [disabled]="addForm.invalid" type="submit" (click)="submitCreate()" class="btn btn-primary">Creer</button>
                                     </div>
                                 </div>
                             </div>

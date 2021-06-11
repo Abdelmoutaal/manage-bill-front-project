@@ -5,6 +5,7 @@ import { FormControl,FormGroup, NgForm, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Client } from 'src/app/models/client';
 import { error } from '@angular/compiler/src/util';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-create-client',
@@ -30,6 +31,14 @@ export class CreateClientComponent implements OnInit {
       }
     )
   }
-
+  submitCreate() {
+    Swal.fire(
+      'Félicitations!',
+      'Client a été bien créer avec succes ',
+      'success'
+    ).then(() => {
+      this.router.navigate(['/create-client']);
+    });
+  }
 }
 

@@ -8051,6 +8051,14 @@ Cart Area CSS
                             top: -1px;
                             font-size: 18px;
                         }
+                        .add {
+                            color: green;
+                            float: right;
+                            display: block;
+                            position: relative;
+                            top: -1px;
+                            font-size: 18px;
+                        }
                     }
                     &.product-quantity {
                         .input-counter {
@@ -8178,7 +8186,7 @@ Checkout Area CSS
     background: $white-color;
     padding: 15px 20px;
     border-top: 3px solid $main-color;
-    position: relative;
+    position: center center;
     margin-bottom: 40px;
 
     i {
@@ -8208,7 +8216,7 @@ Checkout Area CSS
 .billing-details {
     .title {
         margin-bottom: 30px;
-        position: relative;
+        position: center center;
         padding-bottom: 10px;
         border-bottom: 1px solid #eeeeee;
         font: {
